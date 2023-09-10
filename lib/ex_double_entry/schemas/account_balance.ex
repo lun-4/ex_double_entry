@@ -90,7 +90,7 @@ defmodule ExDoubleEntry.AccountBalance do
 
   def update_balance!(%Account{} = account, balance_amount) do
     account
-    |> for_account(account, lock: false)
+    |> for_account(lock: false)
     |> Ecto.Changeset.change(balance_amount: balance_amount)
     |> ExDoubleEntry.repo().update!()
   end

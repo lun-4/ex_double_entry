@@ -81,9 +81,9 @@ defmodule ExDoubleEntry.AccountBalance do
     for_account(account, lock: true)
   end
 
-  def lock_multi!(accounts, fun) do
+  def lock_multi!(_accounts, fun) do
     ExDoubleEntry.repo().transaction(fn ->
-      accounts |> Enum.sort() |> Enum.map(fn account -> lock!(account) end)
+      # accounts |> Enum.sort() |> Enum.map(fn account -> lock!(account) end)
       fun.()
     end)
   end

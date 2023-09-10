@@ -4,6 +4,7 @@ defmodule ExDoubleEntry.Repo do
   @db_adapter (case @db do
                  :postgres -> Ecto.Adapters.Postgres
                  :mysql -> Ecto.Adapters.MyXQL
+                 nil -> Application.fetch_env!(:ex_double_entry, :db_adapter)
                end)
 
   use Ecto.Repo,

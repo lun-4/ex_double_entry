@@ -1,6 +1,6 @@
 defmodule ExDoubleEntry do
-  @db_table_prefix Application.fetch_env!(:ex_double_entry, :db_table_prefix)
-  @repo Application.fetch_env!(:ex_double_entry, :repo)
+  @db_table_prefix Application.compile_env!(:ex_double_entry, :db_table_prefix)
+  @repo Application.compile_env!(:ex_double_entry, :repo)
 
   def db_table_prefix, do: @db_table_prefix
 

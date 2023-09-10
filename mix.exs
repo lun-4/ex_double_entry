@@ -35,6 +35,7 @@ defmodule ExDoubleEntry.MixProject do
       {:ecto_sql, "~> 3.7"},
       {:postgrex, ">= 0.0.0", optional: true},
       {:myxql, ">= 0.0.0", optional: true},
+      {:ecto_sqlite3, ">= 0.0.0", optional: true},
       {:ex_machina, "~> 2.7", only: [:test, :test_mysql]},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
